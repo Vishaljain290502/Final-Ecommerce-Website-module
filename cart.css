@@ -376,6 +376,38 @@ a {
     transition: background 0.3s;
 }
 
+/* About page css  */
+.container-fluid{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #f2f0eb;
+    display: flex;
+    margin-top: 10px;
+}
+.about-details{
+    background: #f2f0eb;
+    width: 500px;
+}
+.about-details h5{
+    /* color: #6b7069; */
+    font-size: large;
+    margin: 2rem;
+}
+.about-details h4{
+    color: #34de00;
+    text-shadow: 1px 1px 3px rgba(46,91,173,0.6);
+    font-size: 2rem;
+    font-weight: 600;
+    /* margin-left: 20px; */
+    /* margin: 2rem; */
+}
+.about-img{
+    margin: 2rem;
+}
+
+
 /* Brackpoints / Making Responsive  */
 
 @media(max-width:1080px){
@@ -420,5 +452,18 @@ a {
         display: flex;
         flex-direction: column;
         /* margin: auto; */
+    }
+    .cartpage{
+       flex-direction: column;
+    }
+    .cartoffer{
+        margin: 0;
+    }
+    .container-fluid{
+        flex-direction: column;
+    }
+    .about-details{
+        background: none;
+        width: auto;
     }
 }
