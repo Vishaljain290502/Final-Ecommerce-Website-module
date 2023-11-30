@@ -1,43 +1,55 @@
+// Navigation menu toggle functionality
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector("#nav-menu");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-})
-document.querySelectorAll(".nav-link").forEach(n=> n.addEventListener("click", ()=>{
+});
+
+// Close navigation menu when a navigation link is clicked
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}))
+}));
 
+// Cart icon and cart functionality
 let cartIcon = document.querySelector("#cart-icon");
 let cart1 = document.querySelector(".cart1");
 let closeCart = document.querySelector("#close-cart");
 
-// cartIcon.onclick = () => {
-//     cart1.classList.add("active");
-// };
-// closeCart.onclick = () => {
-//     cart1.classList.remove("active");
-// };
+// Uncomment these lines if you want to use click events for opening and closing the cart
+/*
+cartIcon.onclick = () => {
+    cart1.classList.add("active");
+};
 
+closeCart.onclick = () => {
+    cart1.classList.remove("active");
+};
+*/
+
+// Display products in the HTML using data
 const row1 = document.getElementById("row1");
 console.log("===", row1);
 data.map((project, index) =>
     row1.innerHTML += `<div class="card" >
-    <div class="col-4" onclick="navigateToProductDetails(${project.id})">
-    <a><img src=${project.image} ></a>
-    <h4>${project.title}</h4>
-    <p>&#36;${project.price}</p>
-</div>
-    <button class="btns" onclick="ViewDetails(${project.id})">Add to Cart</button>
-    <a href="${project.href}"><button class="btnn" href="#">Go to Cart</button></a>
-</div>`
-)
-// function to redirect to the product
+        <div class="col-4" onclick="navigateToProductDetails(${project.id})">
+            <a><img src=${project.image} ></a>
+            <h4>${project.title}</h4>
+            <p>&#36;${project.price}</p>
+        </div>
+        <button class="btns" onclick="ViewDetails(${project.id})">Add to Cart</button>
+        <a href="${project.href}"><button class="btnn" href="#">Go to Cart</button></a>
+    </div>`
+);
+
+// Function to redirect to the product details page
 const navigateToProductDetails = (productId) => {
     window.location.href = `product-details.html?id=${productId}`;
 };
+
+// Function to add a product to the cart
 const ViewDetails = (id) => {
     console.log(id, "id");
     var x = JSON.parse(localStorage.getItem("productdetails"));
@@ -45,15 +57,15 @@ const ViewDetails = (id) => {
     product.quantity = 1;
     if (x) {
         let prod = x.find(items => items.id == id);
-        if (prod) { alert('product has already added in Cart'); }
-        else {
-            // let storage =  JSON.parse(x);
-            alert("Your Product has added successfully in Cart");
+        if (prod) {
+            alert('Product has already been added to the Cart');
+        } else {
+            alert("Your Product has been added successfully to the Cart");
             x.push(product);
             localStorage.setItem("productdetails", JSON.stringify(x));
         }
     } else {
-        alert("Your Product has added successfully in Cart");
+        alert("Your Product has been added successfully to the Cart");
         newArr = [];
         newArr.push(product)
         localStorage.setItem("productdetails", JSON.stringify(newArr));
@@ -69,6 +81,7 @@ const removeItem = (id) => {
     updateCart();
     updateCartCounter();
 };
+
 // Function to update the cart and total
 const updateCart = () => {
     var cartData = JSON.parse(localStorage.getItem("productdetails"));
@@ -101,24 +114,24 @@ const updateCart = () => {
     cartBoxTable.innerHTML = tableData;
 };
 
-
 // Function to update quantity in local storage
 const updateQuantity = (id, quantity) => {
     var cartData = JSON.parse(localStorage.getItem("productdetails"));
     // Ensure the quantity is at least 1
     quantity = Math.max(0, parseInt(quantity, 10));
-    if(quantity == 0){
-        quantity = 1
-        alert("You can remove the  item")
+    if (quantity == 0) {
+        quantity = 1;
+        alert("You can remove the item");
     };
     var updatedCart = cartData.map(item => (item.id === id ? { ...item, quantity: parseInt(quantity, 10) } : item));
     localStorage.setItem("productdetails", JSON.stringify(updatedCart));
     updateCart();
 };
+
 // Call updateCart to initialize the cart display
 updateCart();
 
-
+// Function to update the cart counter
 const updateCartCounter = () => {
     var cartData = JSON.parse(localStorage.getItem("productdetails"));
     var cartCounter = document.getElementById("cart-counter");
@@ -127,6 +140,7 @@ const updateCartCounter = () => {
         cartCounter.innerText = cartData.length;
     }
 };
+
 // Call updateCartCounter to initialize the cart counter
 updateCartCounter();
 

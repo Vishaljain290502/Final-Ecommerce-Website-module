@@ -1,5 +1,6 @@
 // product-details.html
 
+// Retrieve the product ID from the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 console.log("==-===",productId);
@@ -17,6 +18,7 @@ if (productDetails) {
     const producttop = document.getElementById('top');
     const productRating = document.getElementById('ratings');
 
+    // Display product details on the page
     productNameElement.textContent = productDetails.title;
     productPriceElement.textContent = `$${productDetails.price}`;
     productImageElement.src = productDetails.image;
@@ -41,14 +43,16 @@ const addToCart = () => {
         const existingProduct = existingCart.find(item => item.id == productId);
 
         if (existingProduct) {
+            // Alert if the product is already in the cart
             alert('Product is already in the cart');
         } else {
-            // Add the product to the cart
+            // Add the product to the cart and update localStorage
             existingCart.push(productDetails);
             localStorage.setItem("productdetails", JSON.stringify(existingCart));
             alert('Product added to the cart');
         }
     } else {
+        // Handle the case where the product details are not found
         console.error('Product details not found');
     }
 };
