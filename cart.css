@@ -137,6 +137,19 @@ header{
     color: var(--main-color);
     cursor: pointer;
 }
+.cartpage{
+    display: flex;
+    margin: auto;
+}
+.cartoffer{
+    display: flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* margin: auto; */
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
 .total{
     display: flex;
     justify-content: flex-end;
