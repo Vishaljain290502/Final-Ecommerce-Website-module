@@ -55,7 +55,7 @@ const addToCart = () => {
 
 // Function to navigate to the cart page
 const goToCart = () => {
-    window.location.href = '/product.html';
+    window.location.href = 'product.html';
 };
 
 

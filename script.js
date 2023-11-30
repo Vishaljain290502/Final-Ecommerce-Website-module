@@ -36,7 +36,7 @@ data.map((project, index) =>
 )
 // function to redirect to the product
 const navigateToProductDetails = (productId) => {
-    window.location.href = `/product-details.html?id=${productId}`;
+    window.location.href = `product-details.html?id=${productId}`;
 };
 const ViewDetails = (id) => {
     console.log(id, "id");
