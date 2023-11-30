@@ -43,7 +43,11 @@ const updateCart = () => {
                             <div class="detail-box">
                                 <div class="cart-product-title">${data5.title}</div>
                                 <div class="cart-price">$${totalPrice}</div>
+                                <div class="quantity-container">
+                                <button class="quantity-btn" onclick="updateQuantity(${data5.id}, ${data5.quantity - 1})">-</button>
                                 <input type="number" value="${data5.quantity}" class="cart-quantity" onchange="updateQuantity(${data5.id}, this.value)">
+                                <button class="quantity-btn" onclick="updateQuantity(${data5.id}, ${data5.quantity + 1})">+</button>
+                                </div>
                                 <button class="btnss" onclick="removeItem(${data5.id})"><i class='bx bxs-trash-alt cart-remove'></i></button>
                             </div>
                         </div>`;

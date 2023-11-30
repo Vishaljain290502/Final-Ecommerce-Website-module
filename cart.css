@@ -125,12 +125,12 @@ header{
     font-weight: 500;
 }
 .cart-quantity{
-    border: 1px solid var(--text-color);
+    /* border: 1px solid var(--text-color); */
     outline-color: var(--main-color);
     width: 2.4rem;
     text-align: center;
     font-size: 1rem;
-    height: 1rem;
+    height: 2rem;
 }
 .cart-remove {
     font-size: 24px;
@@ -406,6 +406,24 @@ a {
 .about-img{
     margin: 2rem;
 }
+/* Quantity Updater  */
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    width: 107px;
+}
+
+.quantity-btn {
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    margin: 0 4px;
+    font-size: 14px;
+}
+
 
 
 /* Brackpoints / Making Responsive  */
