@@ -81,8 +81,6 @@ const updateQuantity = (id, quantity) => {
     updateCart();
 };
 
-// Call updateCart to initialize the cart display
-updateCart();
 
 // Function to handle the "Buy Now" button click
 const buyNow = () => {
@@ -95,4 +93,24 @@ const buyNow = () => {
 
     // Update the cart display after the purchase
     updateCart();
+
+    // Replace "Buy Now" button with "Continue Shopping" button
+    const buyNowButton = document.querySelector(".btn-buy");
+    buyNowButton.innerHTML = "Continue Shopping";
+    buyNowButton.removeEventListener("click", buyNow); // Remove the "Buy Now" click event
+    buyNowButton.addEventListener("click", continueShopping); // Add the "Continue Shopping" click event
 };
+
+// Function to handle the "Continue Shopping" button click
+const continueShopping = () => {
+    // You can add logic here to navigate back to the shopping page or perform other actions.
+    alert("Continue shopping!");
+
+    // Optionally, you can add additional logic or redirect to the shopping page.
+
+    // Example: Redirect to the shopping page
+    window.location.href = "index.html";
+};
+
+// Call updateCart to initialize the cart display
+updateCart();
