@@ -77,14 +77,13 @@
                             <div class="form-btn">
                                 <span onclick="login()">Login</span>
                                 <span onclick="register()">Register</span>
-                                <hr id="Indicator">
                             </div>
-                            <!-- <form id="login">
+                            <form id="login">
                                 <input type="text" placeholder="Username">
                                 <input type="password" placeholder="password">
                                 <button type="submit" class="btn">Login</button>
                                 <a href="">Forgot password</a>
-                            </form> -->
+                            </form>
                             <form id="reg">
                                 <input type="text" placeholder="Username">
                                 <input type="email" placeholder="email">
@@ -133,6 +132,23 @@
         </div>
      </div>
 
+     <script>
+        let x = document.getElementById("login");
+        let y = document.getElementById("register");
+        let btn = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "0px";
+            z.style.left = "110px";
+        }
+        function login(){
+            x.style.left = "0px";
+            y.style.left = "-400px";
+            z.style.left = "110px";
+            
+        }
+     </script>
 <script src="script.js"></script>
 <script src="data.js"></script>
 <script src="product-details.js"></script>
