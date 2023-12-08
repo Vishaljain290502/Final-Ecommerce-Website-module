@@ -79,9 +79,9 @@
                                 <span onclick="register()">Register</span>
                             </div>
                             <form id="login">
-                                <input type="text" placeholder="Username">
-                                <input type="password" placeholder="password">
-                                <button type="submit" class="btn">Login</button>
+                                <input type="text" placeholder="Username" id="email">
+                                <input type="password" placeholder="password" id="password">
+                                <button type="submit" class="btn" onclick="auth()">Login</button>
                                 <a href="">Forgot password</a>
                             </form>
                             <form id="register">
@@ -147,6 +147,17 @@
             y.style.left = "-400px";
             z.style.left = "110px";
             
+        }
+
+        function auth(){
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            if(email == "admin123@gmail.com" && password == "admin@123"){
+                window.location.assign("index.html");
+                alert("Login successfully");
+            }else{
+                aler("Invalid Information")
+            }
         }
      </script>
 <script src="script.js"></script>
