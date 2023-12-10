@@ -37,7 +37,7 @@ data.map((project, index) =>
         <div class="col-4" onclick="navigateToProductDetails(${project.id})">
             <a><img src=${project.image} ></a>
             <h4>${project.title}</h4>
-            <p>&#36;${project.price}</p>
+            <p>&#8377;${project.price}</p>
         </div>
         <button class="btns" onclick="ViewDetails(${project.id})">Add to Cart</button>
         <a href="${project.href}"><button class="btnn" href="#">Go to Cart</button></a>
@@ -108,8 +108,8 @@ const updateCart = () => {
         let total = cartData.reduce((acc, item) => acc + item.price * item.quantity, 0);
         let price = cartData.reduce((acc, item) => acc + item.price, 0);
         console.log("=====", total);
-        tableData += `<div class="price-total">Price: $${price}</div>`;
-        tableData += `<div class="cart-total">Total: $ ${total}</div>`;
+        tableData += `<div class="price-total">Price: $&#8377;{price}</div>`;
+        tableData += `<div class="cart-total">Total: $&#8377;{total}</div>`;
     }
     cartBoxTable.innerHTML = tableData;
 };
