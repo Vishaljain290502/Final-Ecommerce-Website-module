@@ -1,3 +1,4 @@
+
 // product-details.html
 
 // Retrieve the product ID from the URL parameters

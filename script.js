@@ -146,6 +146,13 @@ updateCartCounter();
 
 
 
+// EmailJS FUNCTION '
+
+// function sendMail (){
+//     let parms ={
+//         name:
+//     }
+// }
 
 
 

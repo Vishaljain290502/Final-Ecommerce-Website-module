@@ -17,6 +17,15 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- EmailJS  -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("8CFUy6kqXiR5hBSp9");
+   })();
+</script>
 
 </head>
 
@@ -261,6 +270,44 @@
         <!-- <script src="pro.js"></script> -->
         <!-- <script src="cart.js"></script> -->
 
+
+
+        <!-- <h2>Contact Form</h2>
+
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="sendMail()">Send Message</button>
+    </form>
+
+    <script>
+        function sendMail() {
+            // You can add your email sending logic here
+            // For demonstration purposes, let's just log the form data to the console
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Subject:', subject);
+            console.log('Message:', message);
+
+            // You can add your email sending logic here
+            // For example, you might use AJAX to send the form data to a server-side script
+        }
+    </script> -->
 
 
 </body>
