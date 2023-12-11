@@ -21,7 +21,7 @@ if (productDetails) {
 
     // Display product details on the page
     productNameElement.textContent = productDetails.title;
-    productPriceElement.textContent = `$${productDetails.price}`;
+    productPriceElement.textContent = `₹${productDetails.price}`;
     productImageElement.src = productDetails.image;
     producttop.textContent = productDetails.top;
     productRating.textContent = `Ratings: ${productDetails.ratings}`;

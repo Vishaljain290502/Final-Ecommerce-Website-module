@@ -42,7 +42,7 @@ const updateCart = () => {
                             <img src="${data5.image}" alt="" class="cart-img">
                             <div class="detail-box">
                                 <div class="cart-product-title">${data5.title}</div>
-                                <div class="cart-price">$${totalPrice}</div>
+                                <div class="cart-price">₹${totalPrice}</div>
                                 <div class="quantity-container">
                                 <button class="quantity-btn" onclick="updateQuantity(${data5.id}, ${data5.quantity - 1})">-</button>
                                 <input type="number" value="${data5.quantity}" class="cart-quantity" onchange="updateQuantity(${data5.id}, this.value)">
@@ -57,8 +57,8 @@ const updateCart = () => {
         let total = cartData.reduce((acc, item) => acc + item.price * item.quantity, 0);
         let price = cartData.reduce((acc, item) => acc + item.price, 0);
         console.log("=====", total);
-        tableData += `<div class="price-total">Price: $${price}</div>`;
-        tableData += `<div class="cart-total">Total: $ ${total}</div>`;
+        tableData += `<div class="price-total">Price: ₹${price}</div>`;
+        tableData += `<div class="cart-total">Total: ₹${total}</div>`;
     }
 
     // Display the cart items and totals in the HTML
@@ -86,7 +86,7 @@ const updateQuantity = (id, quantity) => {
 const buyNow = () => {
     // You can add additional logic here, such as redirecting to a checkout page
     // or displaying a confirmation message. For now, let's just alert a message.
-    alert("Thank you for your purchase!");
+    window.location.href="form.html";
 
     // Optional: Clear the cart after the purchase
     localStorage.removeItem("productdetails");
@@ -119,73 +119,25 @@ updateCart();
 
 // // Function to handle the "Buy Now" button click
 // const buyNow = () => {
-//     // Create a popup form with input fields for Name, Email, Subject, and Message
-//     const popupContent = `
-//         <div class="popup">
-//             <label for="popupName">Name:</label>
-//             <input type="text" id="popupName" required>
-
-//             <label for="popupEmail">Email:</label>
-//             <input type="email" id="popupEmail" required>
-
-//             <label for="popupSubject">Subject:</label>
-//             <input type="text" id="popupSubject" required>
-
-//             <label for="popupMessage">Message:</label>
-//             <textarea id="popupMessage" rows="4" required></textarea>
-
-//             <button onclick="sendMailPopup()">Send Mail</button>
-//         </div>
-//         <div class="overlay" onclick="closePopup()"></div>
-//     `;
-
-//     // Create a wrapper div for the popup
-//     const popupWrapper = document.createElement('div');
-//     popupWrapper.innerHTML = popupContent;
-
-//     // Append the popup to the body
-//     document.body.appendChild(popupWrapper);
-
-//     // Disable scrolling on the background
-//     document.body.style.overflow = "hidden";
+//     // Redirect to the form.html page
+//     window.location.href = "form.html";
 // };
 
-// // Function to close the popup
-// const closePopup = () => {
-//     const popup = document.querySelector('.popup');
-//     const overlay = document.querySelector('.overlay');
+// // Function to handle the "Continue Shopping" button click
+// const continueShopping = () => {
+//     // You can add logic here to navigate back to the shopping page or perform other actions.
+//     alert("Continue shopping!");
 
-//     // Remove the popup and overlay
-//     if (popup && overlay) {
-//         popup.parentNode.removeChild(popup);
-//         overlay.parentNode.removeChild(overlay);
-//     }
+//     // Optionally, you can add additional logic or redirect to the shopping page.
 
-//     // Enable scrolling on the background
-//     document.body.style.overflow = "auto";
+//     // Example: Redirect to the shopping page
+//     window.location.href = "index.html";
 // };
 
-// // Function to handle the "Send Mail" button click in the popup
-// const sendMailPopup = () => {
-//     // Get values from the popup input fields
-//     const name = document.getElementById('popupName').value;
-//     const email = document.getElementById('popupEmail').value;
-//     const subject = document.getElementById('popupSubject').value;
-//     const message = document.getElementById('popupMessage').value;
 
-//     // You can add your email sending logic here
-//     // For demonstration purposes, let's just log the input values to the console
-//     console.log('Name:', name);
-//     console.log('Email:', email);
-//     console.log('Subject:', subject);
-//     console.log('Message:', message);
 
-//     // Close the popup after sending the mail
-//     closePopup();
-// };
 
-// // Call updateCart to initialize the cart display
-// updateCart();
+
 
 
 
