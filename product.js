@@ -86,7 +86,7 @@ const updateQuantity = (id, quantity) => {
 const buyNow = () => {
     // You can add additional logic here, such as redirecting to a checkout page
     // or displaying a confirmation message. For now, let's just alert a message.
-    window.location.href="paymentgateway.html";
+    window.location.href="form.html";
 
     // Optional: Clear the cart after the purchase
     localStorage.removeItem("productdetails");

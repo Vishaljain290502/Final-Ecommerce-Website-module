@@ -611,27 +611,5 @@ form a{
     }
 }
 
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-}
 
-.container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-#card-element {
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-#card-errors {
-    color: #fa755a;
-}
 
