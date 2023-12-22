@@ -154,6 +154,39 @@ updateCartCounter();
 //     }
 // }
 
+// script.js
+// Your publishable key from the Stripe Dashboard
+const stripe = Stripe('your-publishable-key');
+
+// Create an instance of Elements
+const elements = stripe.elements();
+
+// Create an instance of the card Element
+const card = elements.create('card');
+
+// Add an instance of the card Element into the `card-element` div
+card.mount('#card-element');
+
+// Handle form submission
+const form = document.getElementById('payment-form');
+
+form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const { token, error } = await stripe.createToken(card);
+
+    if (error) {
+        // Inform the user if there was an error
+        const errorElement = document.getElementById('card-errors');
+        errorElement.textContent = error.message;
+    } else {
+        // Send the token to your server
+        console.log('Token:', token);
+        // In a real-world scenario, you would send the token to your server for further processing.
+    }
+});
+
+
 
 
 
