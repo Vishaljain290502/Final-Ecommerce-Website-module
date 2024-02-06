@@ -29,7 +29,8 @@
             margin-bottom: 8px;
         }
 
-        input {
+        input, /* Added */
+        input[type="file"] { /* Added */
             width: 100%;
             padding: 8px;
             margin-bottom: 16px;
@@ -56,13 +57,20 @@
             margin-top: -8px;
             margin-bottom: 16px;
         }
+        .Qr-code img{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
     </style>
 </head>
 <body>
-<div class="logoimg">
+<div class="logoimg" style=" padding-right: 180px;">
     <img src="images/prince1.png" alt="">
 </div>
-<form id="contactForm">
+<form id="contactForm" style=" padding: 60px;">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -75,6 +83,14 @@
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
+
+    <label for="img">Scan QR: </label>
+    <div class="Qr-code">
+    <img src="images/Qr.jpeg" alt="" class="QR-image">
+    </div>
+
+    <label for="file">Upload File:</label> <!-- Added -->
+    <input type="file" id="file" name="file"> <!-- Added -->
 
     <p class="error-message" id="errorMessage"></p>
 
