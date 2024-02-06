@@ -665,11 +665,11 @@ form a{
 
 /* Add this to your existing CSS */
 .card {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out smooth;
 }
 
 .card:hover {
-    transform: rotate(360deg);
+    transform: rotateY(360deg);
 }
 
 /* Add this to your existing CSS */
