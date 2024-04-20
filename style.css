@@ -612,76 +612,7 @@ form a{
 }
 
 
- /* Keyframes for header animation */
- @keyframes slideInDown {
-    from {
-        transform: translateY(-100%);
-    }
 
-    to {
-        transform: translateY(0);
-    }
-}
-
-/* Add animation to the header */
-.header {
-    animation: slideInDown 0.5s ease-in-out;
-}
-
-/* Keyframes for product row animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Add animation to product rows */
-.row1 {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-/* Add animation to categories */
-.categories {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-/* Add animation to featured products */
-.offer,
-.testimonial,
-.brands {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-/* Add animation to footer */
-.footer {
-    animation: fadeInUp 1s ease-in-out;
-}
-
-/* Add this to your existing CSS */
-.card {
-    transition: transform 0.5s ease-in-out smooth;
-}
-
-.card:hover {
-    transform: rotateY(360deg);
-}
-
-/* Add this to your existing CSS */
-/* .card {
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: rotateY(360deg);
-} */
-
-/* Add this to your existing CSS */
 .search-bar {
     display: flex;
     align-items: center;
