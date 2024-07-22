@@ -17,7 +17,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  
 </head>
 
 <body>
@@ -257,6 +257,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- <iframe
+        src="https://www.chatbase.co/chatbot-iframe/l9U8JybL0Up7wNBFCWxRD"
+        width="100%"
+        style="height: 100%; min-height: 700px"
+        frameborder="0"
+        ></iframe> -->
         
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
         <script src="data.js"></script>
@@ -267,43 +274,18 @@
 
 
 
-        <!-- <h2>Contact Form</h2>
-
-    <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="button" onclick="sendMail()">Send Message</button>
-    </form>
-
-    <script>
-        function sendMail() {
-            // You can add your email sending logic here
-            // For demonstration purposes, let's just log the form data to the console
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-
-            console.log('Name:', name);
-            console.log('Email:', email);
-            console.log('Subject:', subject);
-            console.log('Message:', message);
-
-            // You can add your email sending logic here
-            // For example, you might use AJAX to send the form data to a server-side script
-        }
-    </script> -->
-
+        <script>
+            window.embeddedChatbotConfig = {
+                chatbotId: "l9U8JybL0Up7wNBFCWxRD",
+                domain: "www.chatbase.co"
+            }
+        </script>
+        <script
+            src="https://www.chatbase.co/embed.min.js"
+            chatbotId="l9U8JybL0Up7wNBFCWxRD"
+            domain="www.chatbase.co"
+            defer>
+        </script>
 
 </body>
 
